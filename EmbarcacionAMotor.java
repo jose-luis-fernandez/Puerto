@@ -16,13 +16,14 @@ public class EmbarcacionAMotor extends Barco
     public String toString()
     {
         String textoADevolver = "";
-        
+        textoADevolver += super.toString();
+        textoADevolver += potencia + "\n";
         return textoADevolver;
     }
     
-    public int getCoeficienteBernue()
+    public int getCoeficienteBernua()
     {
-        return 0;
+        return potencia;
     }
     
 }

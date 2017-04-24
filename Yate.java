@@ -13,13 +13,14 @@ public class Yate extends EmbarcacionAMotor
     public String toString()
     {
         String textoADevolver = "";
-        
+        textoADevolver += super.toString();
+        textoADevolver += numCamarotes + "\n";
         return textoADevolver;
     }
     
     public int getCoeficienteBernua()
     {
-        return 0;
+        return super.getCoeficienteBernua() + numCamarotes;
     }
     
 }

@@ -16,36 +16,14 @@ public class Velero extends Barco
     public String toString()
     {
         String textoADevolver = "";
-        
+        textoADevolver += super.toString();
+        textoADevolver += numMastiles + "\n";
         return textoADevolver;
     }
     
-    public int getCoeficienteBernue()
+    public int getCoeficienteBernua()
     {
-        return 0;
+        return numMastiles;
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

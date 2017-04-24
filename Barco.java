@@ -18,7 +18,10 @@ public abstract class Barco
     public String toString()
     {
         String textoADevolver = "";
-        
+        textoADevolver += propietario.toString();
+        textoADevolver += matricula + "\n";
+        textoADevolver += eslora + "\n";
+        textoADevolver += anoFabricacion + "\n";
         return textoADevolver;
     }
     
@@ -27,6 +30,6 @@ public abstract class Barco
         return eslora;
     }
     
-    public abstract int getCoeficienteBernue();
+    public abstract int getCoeficienteBernua();
     
 }
