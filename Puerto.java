@@ -54,9 +54,10 @@ public class Puerto
     public void verEstadoAmarres(){
         for(int i = 0; i < amarres.length; i++){
             if(amarres[i] == null){
-                System.out.println("El amarre " + i + " esta libre");
+                System.out.println("El amarre " + i + " esta libre" + "\n");
             }else{
                 System.out.println("El amarre " + i + " esta ocupado");
+                System.out.println("***Informacion del alquiler : " + "\n" + amarres[i].toString() + "\n");
             }
         }
     }

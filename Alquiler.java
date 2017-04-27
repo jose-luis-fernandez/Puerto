@@ -28,7 +28,7 @@ public class Alquiler
      */
     public String toString(){
         String cadena = "";
-        cadena = "Dias de ocupacion: " + diasOcupacion + "\n" + "El amarre del barco es: " + posicionAmarre;
+        cadena = barco.toString() + "\n" + "Dias de ocupacion: " + diasOcupacion + "\n" + "El amarre del barco es: " + posicionAmarre + "\n";
         return cadena;
     }
 
@@ -43,4 +43,3 @@ public class Alquiler
         return precio;
     }
 }
-
