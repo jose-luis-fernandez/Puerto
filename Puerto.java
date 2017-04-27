@@ -3,10 +3,11 @@
  * Esta clase nos permite crear y gestionar alquileres de los amarres ademas de comprobar el estado de los mismos.
  * 
  * @author (Marcos Alvarez Varela) 
- * @version (Version: 1.0)
+ * @version (28/04/2017)
  */
 public class Puerto
 {
+    //@param amarres es la coleccion donde estan representados los alquileres de los amarres y su estado. Null significa amarre libre.
     private Alquiler[] amarres;
 
     /**
@@ -24,7 +25,7 @@ public class Puerto
      */
     public float alquilarAmarre(int numeroDias, Barco barco){
         float precio = -1;
-        //Invocamos al metodo que comprueba si hay amarres libres con este if.
+        //Invocamos al metodo que comprueba si hay amarres libres y con este if
         if(hayAmarresLibres()){
             int posicionAmarre = posicionAmarreLibre();
             Alquiler alquiler = new Alquiler(numeroDias, barco, posicionAmarre);
@@ -49,7 +50,8 @@ public class Puerto
     }
     
     /**
-     * Metodo que nos muestra por pantalla el estado de los amarres, si estan ocupados o no.
+     * Metodo que nos muestra por pantalla el estado de los amarres, si estan ocupados o no. Si lo estan, imprime por pantalla ademas los atributos del alquiler, del barco que esta
+     * haciendo uso del mismo y del propietario.
      */
     public void verEstadoAmarres(){
         for(int i = 0; i < amarres.length; i++){
@@ -57,7 +59,7 @@ public class Puerto
                 System.out.println("El amarre " + i + " esta libre" + "\n");
             }else{
                 System.out.println("El amarre " + i + " esta ocupado");
-                System.out.println("***Informacion del alquiler : " + "\n" + amarres[i].toString() + "\n");
+                System.out.println("***Informacion del alquiler : " + "\n" + amarres[i] + "\n");
             }
         }
     }
