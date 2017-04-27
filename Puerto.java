@@ -69,7 +69,7 @@ public class Puerto
          int posicionLibre = 0;
          boolean libre = false;
        while(!libre && (posicionLibre < amarres.length)){
-           if(amarres[posicion] == null){
+           if(amarres[posicionLibre] == null){
                libre = true;
                posicion = posicionLibre;
             }
