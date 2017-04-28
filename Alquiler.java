@@ -8,10 +8,10 @@
  */
 public class Alquiler
 {
-    //@param VALOR_MULTIPLICADOR_ESLORA se utiliza para multiplicar la eslora del barco a la hora de calcular el precio.
+    //Se utiliza para multiplicar la eslora del barco a la hora de calcular el precio.
     private final int VALOR_MULTIPLICADOR_ESLORA = 10;
     
-    //@param VALOR_MULTIPLICADOR_BERNUA se utiliza al calcular el precio para multiplicar el coeficiente bernua del barco.
+    //Se utiliza al calcular el precio para multiplicar el coeficiente bernua del barco.
     private final int VALOR_MULTIPLICADOR_BERNUA = 300;
     private int diasOcupacion;
     private int posicionAmarre;
@@ -20,6 +20,10 @@ public class Alquiler
     /**
      * Constructor de nuestra clase al que se le pasan los parametros referentes al numero de dias que se alquila el barco, el objeto Barco y la posicion del amarre que se va a
      * ocupar.
+     * 
+     * @param numDias son el numero de dias que se va a ocupar el amarre.
+     * @param barco representa el obejto Barco que va a hacer el aqluiler.
+     * @param posicionAmarre es la posicion del primer amarre libre que se va a utiliar para hacer el alquiler
      */
     public Alquiler(int numDias, Barco barco, int posicionAmarre){
         diasOcupacion = numDias;
@@ -28,7 +32,7 @@ public class Alquiler
     }
 
     /**
-     * Metodo toString. 
+     * Metodo toString.
      */
     public String toString(){
         String cadena = "";
@@ -39,6 +43,9 @@ public class Alquiler
     /**
      * Este metodo devuelve el precio del alquiler en funcion de los parametros del barco y los dias de ocupacion, en caso de error
      * devuelve -1;
+     * 
+     * @return precio el precio del aquiler del amarre libre una vez calculado con una serie de atributos del barco y en funcion de 
+     * las constantes que se utilizan para ello.
      */
     public float getPrecioAlquiler(){
         float precio;

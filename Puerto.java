@@ -22,6 +22,10 @@ public class Puerto
     /**
      * Este metodo nos permite crear un alquiler al que le pasamos los dias del mismo y un objeto Barco, devuelve
      * el precio del alquiler una vez pasada la informacion o -1 en caso de que no haya amarres libres.
+     * 
+     * @param numDias es el numero de dias que se va a alquilar el amarre.
+     * @param barco representa al barco que va a alquilar el amarre.
+     * @return precio retorna el precio del alquiler del amarre.
      */
     public float alquilarAmarre(int numeroDias, Barco barco){
         float precio = -1;
@@ -39,6 +43,9 @@ public class Puerto
     /**
      * Metodo que liquida el alquiler de un amarre que le pasamos por parametro segun su posicion, devueleve -1
      * en caso de que haya algun error.
+     * 
+     * @param posicionAmarre es la posicion en nuestra coleccion del amarre ocupado que se quiere liberar.
+     * @return precio devuelve el precio del alquiler de ese amarre concreto.
      */
     public float liquidarAlquilerAmarre(int posicionAmarre){
         float precio = -1;
@@ -66,6 +73,8 @@ public class Puerto
     
     /**
      * Metodo privado que nos devuelve la posicion en el array de un amarre libre.
+     * 
+     * @return posicion devuelve la posicion en la coleccion del primer amarre libre.
      */
     private int posicionAmarreLibre(){
         int posicion = -1;
@@ -84,6 +93,8 @@ public class Puerto
     
     /**
      * Metodo que comprueba que tenemos amarres libres viendo si en nuestro array tenemos posiciones null.
+     * 
+     * @return libre devuelve un valor booleano en funcion de si hay amarres disponibles para alquilar.
      */
     private boolean hayAmarresLibres(){
        boolean libres = false;
